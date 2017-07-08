@@ -3959,3 +3959,8 @@ q5Rm+K37DwhuJi1/FwcJsoz7UMCflo3Ptv0AnVoUmr8CRPXBwp8iXqIPoeM=
 -----END CERTIFICATE-----
 
 ```
+
+```ini
+[curl]
+curl.cainfo = "path\to\cacert.pem"
+```
