@@ -1,2 +1,2 @@
-REM Open current directory from command line into explorer
+:: Open current directory from command line into explorer
 start %cd%
