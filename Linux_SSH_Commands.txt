@@ -82,3 +82,19 @@ cp editmpbundleproduct.phtml_{bak."$(date +%Y%m%d-%H%M%S)"}
 cp <filename> <filename>.bak.$(date --iso-8601=seconds)
 cp editmpbundleproduct.phtml editmpbundleproduct.phtml.bak.$(date --iso-8601=seconds)
 cp editmpbundleproduct.phtml editmpbundleproduct.phtml_bak.$(date --iso-8601=seconds)
+
+:: Copy all content from folder "Parent" into "Child1" except "Child1"
+shopt -s extglob
+cd Parent
+cp !(Child1) Child1/
+:: Example:
+currDir=$(pwd) 
+shopt -s extglob
+cp !($PWD/bakfiles) bakfiles/
+cp -p !($PWD/bakfiles2) bakfiles2/
+cp --parents !($PWD/bakfiles2) bakfiles2/
+::rsync -a myfile /foo/bar/ # works if /foo exists but /foo/bar doesn't.  bar is created.
+cp -a $PWD/. $PWD/bakfiles2/
+rsync -r source/ destination
+rsync -r $PWD/ $PWD/bakfiles/
+rsync -r $PWD/ $PWD/_bakfiles_$(date +%Y%m%d-%H%M%S)/
