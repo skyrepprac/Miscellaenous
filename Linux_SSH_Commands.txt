@@ -98,3 +98,5 @@ cp -a $PWD/. $PWD/bakfiles2/
 rsync -r source/ destination
 rsync -r $PWD/ $PWD/bakfiles/
 rsync -r $PWD/ $PWD/_bakfiles_$(date +%Y%m%d-%H%M%S)/
+rsync -rv --exclude='_bak*/' /path/in/source/ /path/to/destination
+rsync -rv --exclude='_bak*/' $PWD/ $PWD/_bakfiles_$(date +%Y%m%d-%H%M%S)/
