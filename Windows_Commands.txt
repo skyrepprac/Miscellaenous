@@ -25,3 +25,24 @@ xcopy "%cd%\*.*" "%cd%\bakfiles\" /s/h/e/k/f/c
 @echo off
 FOR %%I in (%CD%\*.*) DO echo %%~nI
 pause
+
+::Easily search for a file in directory hierarchy
+@echo off
+setlocal
+set /p inSubFolders="You want to search in sub-folders too ? : "
+set /p searchTerm="What type of files are you looking for ? : "
+
+echo %searchTerm%
+echo %inSubFolders%
+
+:findInDir
+if "%inSubFolders%"=="y" (
+	REM dir *.%searchTerm% /s /b /p | findstr /e .%searchTerm%
+	dir *.%searchTerm% /s /b /p | findstr /e .%searchTerm% > searchList.txt
+	dir *.%searchTerm% /s /b /p | findstr /e .%searchTerm% | more
+) else (
+	REM dir *.%searchTerm% /b /p | findstr /e .%searchTerm%
+	dir *.%searchTerm% /b /p | findstr /e .%searchTerm% > searchList.txt
+	dir *.%searchTerm% /b /p | findstr /e .%searchTerm% | more
+)
+pause
