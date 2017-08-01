@@ -46,3 +46,11 @@ if "%inSubFolders%"=="y" (
 	dir *.%searchTerm% /b /p | findstr /e .%searchTerm% | more
 )
 pause
+
+::Create a nested directory hierarchy
+@ECHO OFF
+SET /p TREE_TO_MAKE="Tree to make: "
+ECHO %CD%/%TREE_TO_MAKE%
+SET FINAL_PATH="%CD%/%TREE_TO_MAKE%"
+MD %FINAL_PATH%
+PAUSE
