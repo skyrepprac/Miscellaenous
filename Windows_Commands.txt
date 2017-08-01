@@ -20,3 +20,8 @@ xcopy "%cd%" "%cd%\backup" /E
 xcopy /s %cd%\*.* %cd%\bakfiles
 xcopy "C:\Test\ACDM\*.*" "C:\Test\ACDM1\" /s/h/e/k/f/c
 xcopy "%cd%\*.*" "%cd%\bakfiles\" /s/h/e/k/f/c
+
+::Print current folder contents in command-line
+@echo off
+FOR %%I in (%CD%\*.*) DO echo %%~nI
+pause
