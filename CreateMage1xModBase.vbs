@@ -70,6 +70,21 @@ VBTab & VBTab & VBTab & "<version>" & moduleVersion & "</version>" & vbCr & _
 VBTab & VBTab & "</" & packageName & "_" & moduleName & ">" & vbCr & _
 VBTab & "</modules>" & vbCr & _
 VBTab & "<global>" & vbCr & _
+VBTab & VBTab & "<models>" & VBCr & _
+VBTab & VBTab & VBTab & "<" & moduleName & ">" & VBCr & _
+VBTab & VBTab & VBTab & VBTab & "<class>" & packageName & "_" & moduleName & "_Model" & "</class>" & VBCr & _
+VBTab & VBTab & VBTab & "</" & moduleName & ">" & VBCr & _
+VBTab & VBTab & "</models>" & VBCr & _
+VBTab & VBTab & "<helpers>" & VBCr & _
+VBTab & VBTab & VBTab & "<" & moduleName & ">" & VBCr & _
+VBTab & VBTab & VBTab & VBTab & "<class>" & packageName & "_" & moduleName & "_Helper" & "</class>" & VBCr & _
+VBTab & VBTab & VBTab & "</" & moduleName & ">" & VBCr & _
+VBTab & VBTab & "</helpers>" & VBCr & _
+VBTab & VBTab & "<blocks>" & VBCr & _
+VBTab & VBTab & VBTab & "<" & moduleName & ">" & VBCr & _
+VBTab & VBTab & VBTab & VBTab & "<class>" & packageName & "_" & moduleName & "_Block" & "</class>" & VBCr & _
+VBTab & VBTab & VBTab & "</" & moduleName & ">" & VBCr & _
+VBTab & VBTab & "</blocks>" & VBCr & _
 VBTab & "</global>" & vbCr & _
 "</config>"
 
