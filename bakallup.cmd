@@ -1,6 +1,7 @@
 ::Backup all files in a directory:
 @ECHO OFF
-SET BAKDIR=%~dp0_bakfiles
+SET "CURDIR=%CD%"
+SET "BAKDIR=%~dp0_bakfiles"
 
 FOR /F "DELIMS=" %%A IN ('WMIC OS GET LOCALDATETIME  ^| FIND "."') DO SET dt=%%A
 SET YYYY=%dt:~0,4%
@@ -11,12 +12,13 @@ SET Min=%dt:~10,2%
 SET Sec=%dt:~12,2%
 SET STAMP=%YYYY%-%MM%-%DD%_%HH%-%Min%-%Sec%
 
-SET DESTINATION=%BAKDIR%\%STAMP%
-MKDIR %DESTINATION%
+SET "DESTINATION=%BAKDIR%\%STAMP%"
+MKDIR "%DESTINATION%"
 
-FOR %%F in (%CD%\*.*) DO (
+FOR %%F in ("%CURDIR%\*.*") DO (
 	IF %%~nxF NEQ %~n0%~x0 (
-		COPY %%~nxF %DESTINATION%\%%~nxF
+		COPY %%~nxF "%DESTINATION%\%%~nxF"
 	)
 )
 PAUSE
+EXIT
