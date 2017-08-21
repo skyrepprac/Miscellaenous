@@ -2,3 +2,4 @@ Find the nth occurrence of any given tag in any type of file like .phtml or .htm
   Find Pattern: (?s)(?:<td(?:.|\s)*?){n-1}(<td)
   Example: (?s)(?:<td(?:.|\s)*?){4}(<td) - Finds the 5th occurrence of the <td> tag in file.
   Example: (?s)(?:<td(?:.|\s)*?){5}(<td) - Finds the 6th occurrence of the <td> tag in file.
+	Example: (?s)(?:<div(?:.|\s)*?){5}(<div) - Finds the 6th occurrence of the <div> tag in file.
