@@ -1,3 +1,4 @@
+```php
 <?php
 $array1 = [['id' => '1', 'name' => 'Coach/Bus'],['id' => '2', 'name' => 'Truck'],['id' => '3', 'name' => 'Urban'],['id' => '4', 'name' => 'RV'],['id' => '3,4', 'name' => 'Urban,RV']];
 print_r($array1);
@@ -28,3 +29,4 @@ function simplifyUniqueArray($array) {
     print_r($arrayFinal);exit;
 }
 ?>
+```
