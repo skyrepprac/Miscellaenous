@@ -1,6 +1,6 @@
 ```php
 <?php
-$array1 = [['id' => '1', 'name' => 'Coach/Bus'],['id' => '2', 'name' => 'Truck'],['id' => '3', 'name' => 'Urban'],['id' => '4', 'name' => 'RV'],['id' => '3,4', 'name' => 'Urban,RV']];
+$array1 = [['id' => '1', 'name' => 'Name1'],['id' => '2', 'name' => 'Name2'],['id' => '3', 'name' => 'Name3'],['id' => '4', 'name' => 'Name4'],['id' => '3,4', 'name' => 'Name3,Name4']];
 print_r($array1);
 simplifyUniqueArray($array1);
 function simplifyUniqueArray($array) {
